@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Nutrition Tracking</h1>
+    
+    <div class="nutrition-grid">
+        <!-- Daily Summary Section -->
+        <div class="section-card">
+            <h2>Daily Summary</h2>
+            <div class="nutrition-summary">
+                <div class="macro-card">
+                    <h3>Calories</h3>
+                    <p class="macro-value">0</p>
+                    <p class="macro-target">Target: 2000</p>
+                </div>
+                <div class="macro-card">
+                    <h3>Protein</h3>
+                    <p class="macro-value">0g</p>
+                    <p class="macro-target">Target: 150g</p>
+                </div>
+                <div class="macro-card">
+                    <h3>Carbs</h3>
+                    <p class="macro-value">0g</p>
+                    <p class="macro-target">Target: 250g</p>
+                </div>
+                <div class="macro-card">
+                    <h3>Fat</h3>
+                    <p class="macro-value">0g</p>
+                    <p class="macro-target">Target: 65g</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food Log Section -->
+        <div class="section-card">
+            <h2>Food Log</h2>
+            <div class="food-log">
+                <div class="meal-section">
+                    <h3>Breakfast</h3>
+                    <button class="add-food-btn">+ Add Food</button>
+                </div>
+                <div class="meal-section">
+                    <h3>Lunch</h3>
+                    <button class="add-food-btn">+ Add Food</button>
+                </div>
+                <div class="meal-section">
+                    <h3>Dinner</h3>
+                    <button class="add-food-btn">+ Add Food</button>
+                </div>
+                <div class="meal-section">
+                    <h3>Snacks</h3>
+                    <button class="add-food-btn">+ Add Food</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nutrition Goals Section -->
+        <div class="section-card">
+            <h2>Nutrition Goals</h2>
+            <div class="goals-container">
+                <div class="goal-item">
+                    <label>Daily Calorie Target</label>
+                    <input type="number" value="2000" class="goal-input">
+                </div>
+                <div class="goal-item">
+                    <label>Protein Target (g)</label>
+                    <input type="number" value="150" class="goal-input">
+                </div>
+                <div class="goal-item">
+                    <label>Carb Target (g)</label>
+                    <input type="number" value="250" class="goal-input">
+                </div>
+                <div class="goal-item">
+                    <label>Fat Target (g)</label>
+                    <input type="number" value="65" class="goal-input">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.section-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.section-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.nutrition-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.macro-card {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.macro-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.macro-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.macro-target {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.meal-section {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.meal-section h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.add-food-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-food-btn:hover {
+    background: var(--primary-dark);
+}
+
+.goal-item {
+    margin-bottom: 1rem;
+}
+
+.goal-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.goal-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nutrition-summary {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %} 

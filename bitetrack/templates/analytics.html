@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Analytics</h1>
+    
+    <div class="analytics-grid">
+        <!-- Progress Overview Section -->
+        <div class="section-card">
+            <h2>Progress Overview</h2>
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <h3>Weight Trend</h3>
+                    <div class="chart-placeholder">
+                        <!-- Chart will be rendered here -->
+                        <p class="placeholder-text">Weight trend chart</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Calorie Intake</h3>
+                    <div class="chart-placeholder">
+                        <!-- Chart will be rendered here -->
+                        <p class="placeholder-text">Calorie intake chart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nutrition Insights Section -->
+        <div class="section-card">
+            <h2>Nutrition Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>Macro Distribution</h3>
+                    <div class="chart-placeholder">
+                        <!-- Chart will be rendered here -->
+                        <p class="placeholder-text">Macro distribution pie chart</p>
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <h3>Weekly Progress</h3>
+                    <div class="chart-placeholder">
+                        <!-- Chart will be rendered here -->
+                        <p class="placeholder-text">Weekly progress bar chart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goals & Achievements Section -->
+        <div class="section-card">
+            <h2>Goals & Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <h3>Current Streak</h3>
+                    <p class="achievement-value">5 days</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Goals Met</h3>
+                    <p class="achievement-value">80%</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Total Logged Meals</h3>
+                    <p class="achievement-value">42</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.section-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.section-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.progress-stats, .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card, .insight-card {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.stat-card h3, .insight-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.chart-placeholder {
+    background: rgba(0, 0, 0, 0.03);
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.achievement-card {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.achievement-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.achievement-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .progress-stats, .insights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %} 
