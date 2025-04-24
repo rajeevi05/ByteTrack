@@ -10,9 +10,9 @@ app = Flask(__name__)
 # Configuration
 app.config.update(
     SECRET_KEY=os.environ.get('SECRET_KEY', 'dev-key-please-change'),
-    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL', 'sqlite:///bitetrack.db'),
+    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL', 'sqlite:///bitetrack.db').replace('postgres://', 'postgresql://'),
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
-    SESSION_COOKIE_SECURE=True,
+    SESSION_COOKIE_SECURE=os.environ.get('FLASK_ENV') == 'production',
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax'
 )

@@ -1,0 +1,1 @@
+web: gunicorn -c gunicorn_config.py 'bitetrack.app:app' 
