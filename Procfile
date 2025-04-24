@@ -1,1 +1,1 @@
-web: PYTHONPATH=$PYTHONPATH:. gunicorn wsgi:application 
+web: PYTHONPATH=$PYTHONPATH:. gunicorn -c gunicorn_config.py bitetrack.app:app 
