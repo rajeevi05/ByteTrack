@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="card-front">
+            <h2 class="auth-title">Create an Account</h2>
+            <form method="POST" class="auth-form">
+                <div class="form-group">
+                    <input type="text" name="username" required class="form-input" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required class="form-input" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" required class="form-input" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirm_password" required class="form-input" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <div class="auth-links">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #3d8b40;
+}
+
+.auth-links {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %} 
