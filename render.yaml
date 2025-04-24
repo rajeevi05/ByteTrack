@@ -2,7 +2,9 @@ services:
   - type: web
     name: bitetrack
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      pip install -e .
     startCommand: gunicorn wsgi:application
     envVars:
       - key: PYTHON_VERSION

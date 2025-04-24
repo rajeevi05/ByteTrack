@@ -1,0 +1,10 @@
+include README.md
+include requirements.txt
+include wsgi.py
+include Procfile
+include render.yaml
+include .python-version
+include .env
+recursive-include bitetrack/static *
+recursive-include bitetrack/templates *
+recursive-include bitetrack *.py 
