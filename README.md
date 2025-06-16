@@ -1,23 +1,42 @@
-# BiteTrack
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rajeevi05/bitetrack/biteTrack_logo.png.png" alt="BiteTrack Logo" width="250"/>
+</p>
 
-BiteTrack is a comprehensive meal planning and nutrition tracking application built with Flask. It features an interactive dashboard for meal planning, nutrition analytics, and health monitoring.
+<h1 align="center">BiteTrack</h1>
 
-## Features
+<p align="center"><em><strong>Transform Your Life,<br/>One Bite at a Time 🍎</strong></em></p>
 
-- Interactive dashboard with meal planning
-- Nutrition analytics and charts
-- Weight progress tracking
-- Food allergy alerts
-- Meal generation based on preferences
-- User authentication system
+<p align="center">
+  <strong>BiteTrack</strong> is a modern meal planning and nutrition tracking web app built using <strong>Flask</strong>.<br/>
+  Designed to help users make healthier choices through interactive dashboards, analytics, and custom meal plans.
+</p>
 
-## Installation
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/Flask-2.x-black?style=for-the-badge&logo=flask"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+</p>
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/bitetrack.git
-cd bitetrack
-```
+---
+
+## ✨ Features
+
+- 🍽️ Interactive dashboard for meal planning  
+- 📊 Nutrition analytics and visual insights  
+- ⚖️ Weight and health progress tracking  
+- 🚨 Smart food allergy alerts  
+- 🍴 Meal generation based on dietary preferences  
+- 🔐 Secure user authentication  
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rajeevi05/bitetrack.git
+   cd bitetrack
+
 
 2. Create a virtual environment and activate it:
 ```bash
