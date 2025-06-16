@@ -1,10 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rajeevi05/bitetrack/biteTrack_logo.png.png" alt="BiteTrack Logo" width="250"/>
+  <img src="biteTrack_logo.png" alt="BiteTrack Logo" width="500"/>
 </p>
 
-<h1 align="center">BiteTrack</h1>
-
-<p align="center"><em><strong>Transform Your Life,<br/>One Bite at a Time 🍎</strong></em></p>
+<p align="center"><em><strong>Transform Your Life, One Bite at a Time </strong></em></p>
 
 <p align="center">
   <strong>BiteTrack</strong> is a modern meal planning and nutrition tracking web app built using <strong>Flask</strong>.<br/>
@@ -19,18 +17,19 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🍽️ Interactive dashboard for meal planning  
-- 📊 Nutrition analytics and visual insights  
-- ⚖️ Weight and health progress tracking  
-- 🚨 Smart food allergy alerts  
-- 🍴 Meal generation based on dietary preferences  
-- 🔐 Secure user authentication  
+-  Secure user authentication  
+-  Interactive dashboard for meal planning  
+-  Nutrition analytics and visual insights  
+-  Weight and health progress tracking  
+-  Smart food allergy alerts  
+-  Meal generation based on dietary preferences  
+
 
 ---
 
-## 📦 Installation
+##  Installation
 
 1. **Clone the repository**
    ```bash
@@ -39,35 +38,35 @@
 
 
 2. Create a virtual environment and activate it:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-```
+  ```bash
+  python -m venv venv
+  source venv/bin/activate  # On Windows use: venv\Scripts\activate
+  ```
 
 3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 4. Set up the database:
-```bash
-flask db init
-flask db migrate
-flask db upgrade
-```
+  ```bash
+  flask db init
+  flask db migrate
+  flask db upgrade
+  ```
 
 ## Running the Application
 
 1. Set the Flask environment variables:
-```bash
-set FLASK_APP=bitetrack.app
-set FLASK_ENV=development
-```
+  ```bash
+  set FLASK_APP=bitetrack.app
+  set FLASK_ENV=development
+  ```
 
 2. Run the application:
-```bash
-flask run
-```
+  ```bash
+  flask run
+  ```
 
 The application will be available at `http://localhost:5000`
 
@@ -159,11 +158,4 @@ pip install -r requirements.txt
 python -m flask run
 ```
 
-## Features
 
-- User authentication
-- Meal tracking
-- Nutrition analytics
-- Progress monitoring
-- Meal planning
-- Interactive dashboard 
